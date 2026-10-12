@@ -1,0 +1,10 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        @media (prefers-color-scheme: dark) { .path-fill { fill: #FFFFFF } }
+    </style>
+    <g fill="none" fill-rule="evenodd">
+        <path d="M0 0h500v500H0z" />
+        <path class="path-fill" d="M334.233 80.556h-81.144v237.653L102.666 80.556H13.89v250.952H93.43V194.341l155.565 239.703h85.243V80.556h-.005Z" fill="#1C1C21" />
+        <path class="path-fill" fill="#0096AE" fill-rule="nonzero" d="m488.889 123.132-32.976 8.048 22.737 28.783-20.456 14.488-17.746-30.599-17.511 30.599-20.472-14.488 22.743-28.783-32.976-8.048 7.958-24.153 30.019 12.652-2.726-31.075h26.155l-2.952 31.075 30.24-12.652z" />
+    </g>
+</svg>

@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0624DA7278BBF0D05820449A /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B1108F7B4DB16B1F46C370D /* Security.swift */; };
+		0ACDC7FDD598FE2E96ECEC6C /* EventViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9FA7DC03842763E243EDBBE /* EventViews.swift */; };
+		232995E582E96B4BEBCD856C /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E04885B7B0526FFCDB14F4 /* Models.swift */; };
+		46289737E98C2D3B4C21FFF3 /* NitsNetsCRMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178D900BD6B61F08C8B32EF /* NitsNetsCRMApp.swift */; };
+		47FCFD06F62188F86C2F8B98 /* MailAndSettingsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0E61EFE4D88E10136A412 /* MailAndSettingsViews.swift */; };
+		5E7F389DD75ED93BB80BB0E3 /* GoogleAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = C50423A99D1922CF1CA18F8D /* GoogleAuthentication.swift */; };
+		628A4775E4E979CE49949A6A /* PrivacyAndContractTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52C2ACB719855FF760D4E76 /* PrivacyAndContractTests.swift */; };
+		7071790E8B5F3AFFE538EC90 /* SpeechRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57CF7D9D2BEE21929C28063C /* SpeechRecorder.swift */; };
+		880A8432A25BB154DF60614E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1478B3BA113D6B6D83AB819 /* Assets.xcassets */; };
+		A82C1FEF520670E7A266FFE1 /* LocalDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D255515376A77F498510922 /* LocalDemoUITests.swift */; };
+		A8BC137F0BFBEC9A18175FD7 /* LiveAPISmokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796C0ECAAD9832AEF2674E8E /* LiveAPISmokeTests.swift */; };
+		BC89CAE3AE21642ACA38C1DC /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE50AD41247B6DCEAC656CF /* Session.swift */; };
+		C30F6E6118EC11DFB146077C /* CaptureViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB79E6AC6365E76FCF2E57AD /* CaptureViews.swift */; };
+		CDF188D2C238E908A1759A79 /* LocalDemoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3251DF5A11181BFE455857 /* LocalDemoStore.swift */; };
+		D57136A278D3F21ADF7F23F3 /* GoogleAuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5670F528D00C08E119C118 /* GoogleAuthenticationTests.swift */; };
+		E78A5D4D6E02AB7118E4A0F4 /* LocalDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DC4D1CEE3719AFB99A1819 /* LocalDemoTests.swift */; };
+		EDA72043F55FFFBAF1FF82C0 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73BCEEC972515FC0294724E /* DesignSystem.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07A6FC57807C09B8EAEBF9A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CB1D2E217063A85B42EC562 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3C0CB778EFD8A3F63663A33;
+			remoteInfo = NitsNetsCRM;
+		};
+		EED85254DFB956DD18635E35 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CB1D2E217063A85B42EC562 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3C0CB778EFD8A3F63663A33;
+			remoteInfo = NitsNetsCRM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		15E04885B7B0526FFCDB14F4 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		27B45D0E8E301B848DFC427C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2B1108F7B4DB16B1F46C370D /* Security.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
+		2D255515376A77F498510922 /* LocalDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDemoUITests.swift; sourceTree = "<group>"; };
+		4AE50AD41247B6DCEAC656CF /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		5418B5A41B49269BDAF9BB7B /* NitsNetsCRM.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NitsNetsCRM.entitlements; sourceTree = "<group>"; };
+		57CF7D9D2BEE21929C28063C /* SpeechRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecorder.swift; sourceTree = "<group>"; };
+		6E66D7EE6BA5621DD0FF493E /* NitsNetsCRMTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = NitsNetsCRMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EA730176BE6D8663B2C857A /* NitsNetsCRM.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = NitsNetsCRM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		796C0ECAAD9832AEF2674E8E /* LiveAPISmokeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveAPISmokeTests.swift; sourceTree = "<group>"; };
+		8178D900BD6B61F08C8B32EF /* NitsNetsCRMApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NitsNetsCRMApp.swift; sourceTree = "<group>"; };
+		894B86EA1176E758C19C01A1 /* NitsNetsCRMUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = NitsNetsCRMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B3251DF5A11181BFE455857 /* LocalDemoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDemoStore.swift; sourceTree = "<group>"; };
+		A3DC4D1CEE3719AFB99A1819 /* LocalDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDemoTests.swift; sourceTree = "<group>"; };
+		B1478B3BA113D6B6D83AB819 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C50423A99D1922CF1CA18F8D /* GoogleAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthentication.swift; sourceTree = "<group>"; };
+		C73BCEEC972515FC0294724E /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		C9FA7DC03842763E243EDBBE /* EventViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViews.swift; sourceTree = "<group>"; };
+		CB79E6AC6365E76FCF2E57AD /* CaptureViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureViews.swift; sourceTree = "<group>"; };
+		CE5670F528D00C08E119C118 /* GoogleAuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthenticationTests.swift; sourceTree = "<group>"; };
+		CFD0E61EFE4D88E10136A412 /* MailAndSettingsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailAndSettingsViews.swift; sourceTree = "<group>"; };
+		D52C2ACB719855FF760D4E76 /* PrivacyAndContractTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyAndContractTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		100EB32EB51A910D9F0511C1 /* NitsNetsCRMUITests */ = {
+			isa = PBXGroup;
+			children = (
+				796C0ECAAD9832AEF2674E8E /* LiveAPISmokeTests.swift */,
+				2D255515376A77F498510922 /* LocalDemoUITests.swift */,
+			);
+			path = NitsNetsCRMUITests;
+			sourceTree = "<group>";
+		};
+		45E41277004AA6F15B0585FA = {
+			isa = PBXGroup;
+			children = (
+				CEFEE2DC73AE12E3CEB090ED /* NitsNetsCRM */,
+				D4382C4569041DBB7ADAD0EF /* NitsNetsCRMTests */,
+				100EB32EB51A910D9F0511C1 /* NitsNetsCRMUITests */,
+				ABA659BC4C87173D7896CC2F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABA659BC4C87173D7896CC2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6EA730176BE6D8663B2C857A /* NitsNetsCRM.app */,
+				6E66D7EE6BA5621DD0FF493E /* NitsNetsCRMTests.xctest */,
+				894B86EA1176E758C19C01A1 /* NitsNetsCRMUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEFEE2DC73AE12E3CEB090ED /* NitsNetsCRM */ = {
+			isa = PBXGroup;
+			children = (
+				B1478B3BA113D6B6D83AB819 /* Assets.xcassets */,
+				CB79E6AC6365E76FCF2E57AD /* CaptureViews.swift */,
+				C73BCEEC972515FC0294724E /* DesignSystem.swift */,
+				C9FA7DC03842763E243EDBBE /* EventViews.swift */,
+				C50423A99D1922CF1CA18F8D /* GoogleAuthentication.swift */,
+				27B45D0E8E301B848DFC427C /* Info.plist */,
+				9B3251DF5A11181BFE455857 /* LocalDemoStore.swift */,
+				CFD0E61EFE4D88E10136A412 /* MailAndSettingsViews.swift */,
+				15E04885B7B0526FFCDB14F4 /* Models.swift */,
+				5418B5A41B49269BDAF9BB7B /* NitsNetsCRM.entitlements */,
+				8178D900BD6B61F08C8B32EF /* NitsNetsCRMApp.swift */,
+				2B1108F7B4DB16B1F46C370D /* Security.swift */,
+				4AE50AD41247B6DCEAC656CF /* Session.swift */,
+				57CF7D9D2BEE21929C28063C /* SpeechRecorder.swift */,
+			);
+			path = NitsNetsCRM;
+			sourceTree = "<group>";
+		};
+		D4382C4569041DBB7ADAD0EF /* NitsNetsCRMTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE5670F528D00C08E119C118 /* GoogleAuthenticationTests.swift */,
+				A3DC4D1CEE3719AFB99A1819 /* LocalDemoTests.swift */,
+				D52C2ACB719855FF760D4E76 /* PrivacyAndContractTests.swift */,
+			);
+			path = NitsNetsCRMTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B3C0CB778EFD8A3F63663A33 /* NitsNetsCRM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1824BE6CB6222648E81F1C90 /* Build configuration list for PBXNativeTarget "NitsNetsCRM" */;
+			buildPhases = (
+				30507D1665C52D5315DAFB03 /* Sources */,
+				71163D05AE8D9267E0EF18B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NitsNetsCRM;
+			packageProductDependencies = (
+			);
+			productName = NitsNetsCRM;
+			productReference = 6EA730176BE6D8663B2C857A /* NitsNetsCRM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DC1C95F57688744445052230 /* NitsNetsCRMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99BA34B296600450CD6EAB2E /* Build configuration list for PBXNativeTarget "NitsNetsCRMTests" */;
+			buildPhases = (
+				4D5FFBC1115CD3659E21BC85 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9791596C15955DAB9E650D8B /* PBXTargetDependency */,
+			);
+			name = NitsNetsCRMTests;
+			packageProductDependencies = (
+			);
+			productName = NitsNetsCRMTests;
+			productReference = 6E66D7EE6BA5621DD0FF493E /* NitsNetsCRMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FBB9D9C3C36793551DEFAEE4 /* NitsNetsCRMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 014FE2953031CA99C0062F5F /* Build configuration list for PBXNativeTarget "NitsNetsCRMUITests" */;
+			buildPhases = (
+				5F1B019A40409B7A8CAE1D97 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6D2241EA0B154F203BCFD23 /* PBXTargetDependency */,
+			);
+			name = NitsNetsCRMUITests;
+			packageProductDependencies = (
+			);
+			productName = NitsNetsCRMUITests;
+			productReference = 894B86EA1176E758C19C01A1 /* NitsNetsCRMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CB1D2E217063A85B42EC562 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					B3C0CB778EFD8A3F63663A33 = {
+						DevelopmentTeam = T5922VMWM7;
+						ProvisioningStyle = Automatic;
+					};
+					DC1C95F57688744445052230 = {
+						DevelopmentTeam = T5922VMWM7;
+						ProvisioningStyle = Automatic;
+					};
+					FBB9D9C3C36793551DEFAEE4 = {
+						DevelopmentTeam = T5922VMWM7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B3C0CB778EFD8A3F63663A33;
+					};
+				};
+			};
+			buildConfigurationList = 56E1695EFF90943D8CDACC0A /* Build configuration list for PBXProject "NitsNetsCRM" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 45E41277004AA6F15B0585FA;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = ABA659BC4C87173D7896CC2F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B3C0CB778EFD8A3F63663A33 /* NitsNetsCRM */,
+				DC1C95F57688744445052230 /* NitsNetsCRMTests */,
+				FBB9D9C3C36793551DEFAEE4 /* NitsNetsCRMUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		71163D05AE8D9267E0EF18B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				880A8432A25BB154DF60614E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30507D1665C52D5315DAFB03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C30F6E6118EC11DFB146077C /* CaptureViews.swift in Sources */,
+				EDA72043F55FFFBAF1FF82C0 /* DesignSystem.swift in Sources */,
+				0ACDC7FDD598FE2E96ECEC6C /* EventViews.swift in Sources */,
+				5E7F389DD75ED93BB80BB0E3 /* GoogleAuthentication.swift in Sources */,
+				CDF188D2C238E908A1759A79 /* LocalDemoStore.swift in Sources */,
+				47FCFD06F62188F86C2F8B98 /* MailAndSettingsViews.swift in Sources */,
+				232995E582E96B4BEBCD856C /* Models.swift in Sources */,
+				46289737E98C2D3B4C21FFF3 /* NitsNetsCRMApp.swift in Sources */,
+				0624DA7278BBF0D05820449A /* Security.swift in Sources */,
+				BC89CAE3AE21642ACA38C1DC /* Session.swift in Sources */,
+				7071790E8B5F3AFFE538EC90 /* SpeechRecorder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D5FFBC1115CD3659E21BC85 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D57136A278D3F21ADF7F23F3 /* GoogleAuthenticationTests.swift in Sources */,
+				E78A5D4D6E02AB7118E4A0F4 /* LocalDemoTests.swift in Sources */,
+				628A4775E4E979CE49949A6A /* PrivacyAndContractTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F1B019A40409B7A8CAE1D97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8BC137F0BFBEC9A18175FD7 /* LiveAPISmokeTests.swift in Sources */,
+				A82C1FEF520670E7A266FFE1 /* LocalDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9791596C15955DAB9E650D8B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3C0CB778EFD8A3F63663A33 /* NitsNetsCRM */;
+			targetProxy = EED85254DFB956DD18635E35 /* PBXContainerItemProxy */;
+		};
+		C6D2241EA0B154F203BCFD23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3C0CB778EFD8A3F63663A33 /* NitsNetsCRM */;
+			targetProxy = 07A6FC57807C09B8EAEBF9A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0F3EBC5B88649201FACB9BFE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NitsNetsCRM/NitsNetsCRM.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = NitsNetsCRM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nitsnets.crm;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		374BA2FEF90954D02508F705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nitsnets.NitsNetsCRMUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NitsNetsCRM;
+			};
+			name = Debug;
+		};
+		588FED41880FAF445E78152D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nitsnets.NitsNetsCRMUITests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NitsNetsCRM;
+			};
+			name = Release;
+		};
+		6457345C8FE591B7931AC705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CRM_DEFAULT_API_URL = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = T5922VMWM7;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7CA1D7D998EE90881C6B99CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nitsnets.NitsNetsCRMTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NitsNetsCRM.app/NitsNetsCRM";
+			};
+			name = Debug;
+		};
+		9788230D433B003BD1E2C5C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CRM_DEFAULT_API_URL = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = T5922VMWM7;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AAA303E988758622FF690A0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = NitsNetsCRM/NitsNetsCRM.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = NitsNetsCRM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nitsnets.crm;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ECED954AA14B7C2C1BAB3E7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nitsnets.NitsNetsCRMTests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NitsNetsCRM.app/NitsNetsCRM";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		014FE2953031CA99C0062F5F /* Build configuration list for PBXNativeTarget "NitsNetsCRMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				374BA2FEF90954D02508F705 /* Debug */,
+				588FED41880FAF445E78152D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1824BE6CB6222648E81F1C90 /* Build configuration list for PBXNativeTarget "NitsNetsCRM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F3EBC5B88649201FACB9BFE /* Debug */,
+				AAA303E988758622FF690A0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		56E1695EFF90943D8CDACC0A /* Build configuration list for PBXProject "NitsNetsCRM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6457345C8FE591B7931AC705 /* Debug */,
+				9788230D433B003BD1E2C5C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		99BA34B296600450CD6EAB2E /* Build configuration list for PBXNativeTarget "NitsNetsCRMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7CA1D7D998EE90881C6B99CD /* Debug */,
+				ECED954AA14B7C2C1BAB3E7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2CB1D2E217063A85B42EC562 /* Project object */;
+}

@@ -1,0 +1,21 @@
+{
+  "name": "nitsnets-crm",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "bash scripts/dev.sh",
+    "dev:iphone": "bash scripts/dev-iphone.sh",
+    "db:start": "bash scripts/db.sh start",
+    "db:stop": "bash scripts/db.sh stop",
+    "contract:generate": "node scripts/generate-contract.mjs",
+    "contract:check": "node scripts/check-contract.mjs",
+    "verify:api": "node scripts/verify-api.mjs",
+    "setup:local": "bash scripts/setup-local.sh"
+  },
+  "devDependencies": {
+    "@apidevtools/swagger-parser": "^12.1.0",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}
