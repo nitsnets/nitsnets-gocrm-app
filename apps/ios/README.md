@@ -28,7 +28,7 @@ Requisitos comprobados: Xcode 26.3, SDK iOS 26.2, simulador iPhone 17 con iOS 26
 1. Arranca el servidor siguiendo `../api/README.md`.
 2. En la pantalla de acceso, comprueba el estado **Servidor conectado**. **Servidor API** permite editar la dirección y se despliega automáticamente cuando está vacía o falla la conexión. Por defecto: `http://127.0.0.1:8000/api/v1`, para el simulador de este Mac.
 3. Entra con una cuenta del servidor. En la instalación demo local: `eladio@nitsnets.demo` / `DemoCRM!2026`.
-4. Para un iPhone real, indica un servidor HTTPS accesible desde ese dispositivo o, en desarrollo, la dirección `.local` del Mac en la misma Wi-Fi. El proyecto ya selecciona firma automática de **Nitsnets SL**, equipo **T5922VMWM7**, conservando el bundle **com.nitsnets.crm**. No se ha publicado en App Store ni TestFlight.
+4. Para un iPhone real, las compilaciones incluyen por defecto `https://nitsnets-gocrm-app.servidoralfa.com/api/v1` (develop). Requiere una cuenta provisionada en ese servidor; las credenciales demo locales no se crean allí. El proyecto selecciona firma automática de **Nitsnets SL**, equipo **T5922VMWM7**, conservando el bundle **com.nitsnets.crm**. No se ha publicado en App Store ni TestFlight.
 
 La app usa Keychain y requiere **firma ad hoc incluso en el simulador**. No uses `CODE_SIGNING_ALLOWED=NO` para ejecutarla: iOS rechazará guardar tokens con el error -34018. No hay almacenamiento alternativo de tokens en preferencias o archivos.
 
@@ -57,22 +57,24 @@ Compilación para dispositivo, sin instalar:
 xcodebuild -project NitsNetsCRM.xcodeproj -scheme NitsNetsCRM \
   -destination 'generic/platform=iOS' -configuration Debug \
   -derivedDataPath .build-device -allowProvisioningUpdates \
-  build CODE_SIGNING_ALLOWED=YES CODE_SIGN_IDENTITY='Apple Development' \
-  CRM_DEFAULT_API_URL=http://Mac-mini-de-Elad-2.local:8001/api/v1 \
-  'SWIFT_ACTIVE_COMPILATION_CONDITIONS=$(inherited) DEBUG CRM_DEMO_LOGIN'
+  build CODE_SIGNING_ALLOWED=YES CODE_SIGN_IDENTITY='Apple Development'
 ```
 
-La compilación demo solicitada para el iPhone precarga `eladio@nitsnets.demo` y `DemoCRM!2026`; solo hay que pulsar **Iniciar sesión**. Los campos siguen siendo editables y no se inicia sesión automáticamente. La precarga requiere a la vez `DEBUG` y `CRM_DEMO_LOGIN`; las compilaciones Release y las compilaciones habituales sin esta opción dejan ambos campos vacíos.
+La compilación habitual deja correo y contraseña vacíos. Para una prueba explícita contra la API demo del Mac, se puede sobrescribir `CRM_DEFAULT_API_URL=http://Mac-mini-de-Elad-2.local:8001/api/v1` y añadir `'SWIFT_ACTIVE_COMPILATION_CONDITIONS=$(inherited) DEBUG CRM_DEMO_LOGIN'`. Esa opción precarga las credenciales demo locales, sin iniciar sesión automáticamente; no debe utilizarse con develop. La precarga requiere a la vez `DEBUG` y `CRM_DEMO_LOGIN` y no existe en Release.
 
 El resultado está en `.build-device/Build/Products/Debug-iphoneos/NitsNetsCRM.app`. `codesign -dvv` permite comprobar firma y equipo. El perfil de desarrollo actual incluye el iPhone 18 Pro pareado; el iPhone 13 Pro necesita incorporarse al perfil si se elige ese dispositivo.
 
 El 10 de octubre de 2026 se instaló correctamente en el **iPhone 18 Pro elegido por el usuario**, con nombre NitsNets y bundle com.nitsnets.crm. Xcode/devicectl falló al montar su imagen de desarrollo (12040, variante ausente para este modelo), por lo que se utilizó ideviceinstaller ya instalado en el Mac para transferir el paquete firmado por USB. El dispositivo completó la verificación de firma e instalación al 100 %; una consulta posterior confirmó la app instalada. No fue necesario modificar protecciones del teléfono. La instalación no acredita todavía la depuración, el login ni la conectividad de la API en el dispositivo.
 
-Para incorporar una URL inicial al binario, añade `CRM_DEFAULT_API_URL=https://crm.tuempresa.es/api/v1` al comando de compilación. El ajuste no contiene credenciales y puede cambiarse después desde la pantalla de acceso. En un iPhone, `127.0.0.1` apunta al propio teléfono: sin URL configurada, la app deja el campo vacío en vez de usar localhost. El simulador mantiene la URL local por defecto.
+El 22 de octubre de 2026 se actualizó ese iPhone 18 Pro a la compilación **2**, con nombre gocrm y la API HTTPS de develop incorporada. Build y verificación de firma correctos; `ideviceinstaller upgrade` completó la actualización al 100 % después del mismo error 12040 de devicectl. Se verificó la URL en el Info.plist del binario y la salud de la API desde el Mac. No se ha verificado el login desde el teléfono; la actualización conserva cualquier sesión y servidor elegidos anteriormente.
+
+El ajuste `CRM_DEFAULT_API_URL[sdk=iphoneos*]` incorpora la API de develop al binario para dispositivo. Para sobrescribirla, añade `CRM_DEFAULT_API_URL=https://crm.tuempresa.es/api/v1` al comando de compilación. El ajuste no contiene credenciales y puede cambiarse después desde la pantalla de acceso. En un iPhone, `127.0.0.1` apunta al propio teléfono. El simulador mantiene la URL local por defecto.
 
 ## Conexión desde el iPhone
 
-La compilación local para dispositivo incorpora `http://Mac-mini-de-Elad-2.local:8001/api/v1` mediante el ajuste del comando anterior; el proyecto conserva el ajuste vacío y el simulador continúa usando `127.0.0.1:8000`. El Mac debe permanecer encendido y servir la API en la red local; el iPhone debe estar en la misma Wi-Fi y permitir **Red local** para gocrm en Ajustes. Una dirección guardada tras un login anterior tiene prioridad sobre la del binario y se puede cambiar desde **Servidor API**.
+La compilación 2 para dispositivo incorpora `https://nitsnets-gocrm-app.servidoralfa.com/api/v1`. Funciona por Internet, sin depender del Mac ni de la misma Wi-Fi. El simulador continúa usando `127.0.0.1:8000` salvo que se sobrescriba el ajuste al compilar.
+
+Una dirección guardada tras un login anterior tiene prioridad sobre la del binario. La actualización conserva sesiones, Keychain y notas locales, y no traslada tokens entre servidores. Para pasar desde el Mac a develop, cierra sesión en **Espacio**, abre **Servidor API** en el acceso e introduce la URL HTTPS anterior. Pulsa **Reintentar conexión** y entra con una cuenta del servidor de develop. Google requiere su propia configuración en Laravel; comprobar salud no acredita un login ni una sincronización Gmail.
 
 La pantalla de acceso muestra **Servidor conectado**, **Servidor no alcanzable** o **Servidor sin configurar**. **Reintentar conexión** vuelve a consultar la disponibilidad de la API. La contraseña permanece disponible con una URL válida aunque un sondeo anterior haya fallado; el intento de acceso tiene un timeout de 25 segundos. Los errores indican cómo revisar red, dirección, permiso local y servidor, sin incluir tokens, contraseñas ni detalles internos de transporte. El formulario se conserva durante la espera y después de un error.
 

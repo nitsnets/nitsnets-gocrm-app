@@ -10,6 +10,7 @@ settings:
     CODE_SIGN_STYLE: Automatic
     TARGETED_DEVICE_FAMILY: '1,2'
     CRM_DEFAULT_API_URL: ''
+    'CRM_DEFAULT_API_URL[sdk=iphoneos*]': https://nitsnets-gocrm-app.servidoralfa.com/api/v1
 targets:
   NitsNetsCRM:
     type: application
@@ -26,6 +27,7 @@ targets:
           - CFBundleURLName: com.nitsnets.crm.oauth
             CFBundleURLSchemes: [com.nitsnets.crm]
         CFBundleDisplayName: gocrm
+        CFBundleVersion: $(CURRENT_PROJECT_VERSION)
         CRMDefaultAPIURL: $(CRM_DEFAULT_API_URL)
         UILaunchScreen: {}
         UIApplicationSceneManifest:
@@ -42,7 +44,7 @@ targets:
         PRODUCT_BUNDLE_IDENTIFIER: com.nitsnets.crm
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         MARKETING_VERSION: 0.1.0
-        CURRENT_PROJECT_VERSION: 1
+        CURRENT_PROJECT_VERSION: 2
   NitsNetsCRMTests:
     type: bundle.unit-test
     platform: iOS
