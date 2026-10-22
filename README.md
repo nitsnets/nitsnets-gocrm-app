@@ -44,8 +44,12 @@ npm run dev
 ```
 
 - Web: http://127.0.0.1:3000
-- API: http://127.0.0.1:8000/api/v1
-- Salud API: http://127.0.0.1:8000/api/v1/health
+- API: http://127.0.0.1:3000/api/v1
+- Salud API: http://127.0.0.1:3000/api/v1/health
+
+Web y API comparten el puerto de acceso 3000 en desarrollo local. Next reenvía `/api/v1/*` a Laravel, que sigue ejecutándose internamente en `127.0.0.1:8000`. `CRM_API_URL` conserva ese destino interno; no debe apuntar al propio puerto 3000. La web mantiene sus rutas `/api/backend/*` y `/api/auth/*`. En el simulador iOS también se puede indicar `http://127.0.0.1:3000/api/v1` en **Servidor API**.
+
+La misma regla funciona con `next build` y `next start`: configurar `CRM_API_URL` con la URL del servicio Laravel tanto al construir como al arrancar la web, y `CRM_WEB_ORIGIN` con el origen público de Next. Ambos servicios deben estar desplegados; esta configuración no instala Laravel ni cambia por sí sola el dominio que ya sirve la API. En HTTPS, usar `CRM_COOKIE_SECURE=true` y `NEXT_PUBLIC_CRM_DEMO=false`.
 
 El comando dev arranca API, worker, programador de sincronización y web. Ctrl+C detiene esos procesos. PostgreSQL se detiene por separado con `npm run db:stop`. No uses estos comandos sobre bases reales sin revisar la configuración.
 
