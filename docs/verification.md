@@ -121,3 +121,14 @@ Modo explícito en Debug, independiente de la API. La suite unitaria pasó 21 pr
 El recorrido UI crea una nota, busca un contacto y concede acceso a un email ficticio; no requiere login en una API ni modifica registros reales. Los fixtures del modo demo no equivalen a una cuenta Gmail conectada. Capturas en `apps/ios/verification/local-demo/`. La API local respondió HTTP 200 tanto por localhost:8000 como por el nombre .local del Mac en :8001.
 
 El recorrido UI final pasó sin fallos tras revisar las capturas y corregir la posición de la banda de demo para conservar la cabecera y el botón +. Comprueba también apertura de Nueva nota desde +. La compilación Debug firmada se instaló mediante upgrade USB en el iPhone 18 Pro existente (`com.nitsnets.crm`); el instalador confirmó InstallComplete 100 %. Se conservaron identificadores y almacenamiento de sesión. Esta instalación no acredita una prueba manual en el teléfono ni OAuth real.
+
+## Web y API en el mismo puerto local — 22/10/2026
+
+Con `npm run dev`, la web en `http://127.0.0.1:3000/` y la API en `http://127.0.0.1:3000/api/v1/health` respondieron HTTP 200. Next reenvía `/api/v1/*` a Laravel en loopback:8000 solo en desarrollo. No se modificó el servidor develop.
+
+`CRM_API_URL=http://127.0.0.1:3000/api/v1 npm run verify:api` pasó 38 comprobaciones contra la API real local, incluyendo autenticación Bearer, aislamiento entre empresas e idempotencia. `npm run contract:check` validó 35 rutas y 58 operaciones. En `apps/web`, `CRM_WEB_TEST_URL=http://127.0.0.1:3000 npm test` pasó 17 pruebas; la integración Google de producción quedó omitida. La integración web verificó login con cookie HttpOnly, CRUD, cálculos, CSRF, empresa obsoleta y logout. TypeScript, sintaxis de `scripts/dev.sh` y `git diff --check` correctos. No se verificó este nuevo acceso desde un iPhone físico.
+
+
+## Puerto común en compilación de producción — 22/10/2026
+
+La reescritura `/api/v1/*` también se activa en `next build`/`next start`, con el destino Laravel tomado de `CRM_API_URL` durante la compilación. En la prueba local de producción, web y salud API respondieron HTTP 200 en el puerto 3100. `CRM_API_URL=http://127.0.0.1:3100/api/v1 npm run verify:api` pasó las 38 comprobaciones; la suite web contra ese mismo origen pasó 17 pruebas, con una integración Google omitida. Build, TypeScript y contrato correctos. Esta comprobación local no acredita un despliegue en servidoralfa; su resultado depende del flujo MCP.

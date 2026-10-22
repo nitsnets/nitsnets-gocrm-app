@@ -14,6 +14,8 @@ npm run dev
 
 Abrir http://127.0.0.1:3000. `CRM_API_URL` es una variable **solo del servidor** y apunta por defecto a `http://127.0.0.1:8000/api/v1`. Las solicitudes pasan por `/api/backend/*`: no hace falta exponer CORS de Laravel al navegador.
 
+La API también está disponible bajo `/api/v1` en el origen de la web mediante una reescritura a `CRM_API_URL`, tanto en desarrollo como en producción. Así los clientes pueden usar el mismo puerto que la web, conservando la autenticación Bearer de Laravel. No configurar `CRM_API_URL` con el origen de Next, porque crearía un bucle. La regla no intercepta `/api/backend/*` ni `/api/auth/*`. Configurar la misma URL de Laravel al construir y al arrancar Next; un cambio de destino requiere reconstruir. El servicio Laravel debe estar publicado previamente.
+
 ```sh
 npm run typecheck
 npm test
