@@ -302,7 +302,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = NitsNetsCRM/NitsNetsCRM.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				INFOPLIST_FILE = NitsNetsCRM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -385,6 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CRM_DEFAULT_API_URL = "";
+				"CRM_DEFAULT_API_URL[sdk=iphoneos*]" = "https://nitsnets-gocrm-app.servidoralfa.com/api/v1";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = T5922VMWM7;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -469,6 +470,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CRM_DEFAULT_API_URL = "";
+				"CRM_DEFAULT_API_URL[sdk=iphoneos*]" = "https://nitsnets-gocrm-app.servidoralfa.com/api/v1";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = T5922VMWM7;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -499,7 +501,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = NitsNetsCRM/NitsNetsCRM.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				INFOPLIST_FILE = NitsNetsCRM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
